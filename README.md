@@ -20,12 +20,14 @@ here's the json schema for validation:
             "pattern": "^(https?://).+",
             "description": "Uri della risorsa"
           },
+
           "label": {
             "type": "string",
             "pattern": ".+",
             "uniqueitem": true,
             "description" : "label visualizzata nel grafico"
          },
+
           "size": {
             "type": "integer",
             "minimum": 0,
@@ -33,18 +35,21 @@ here's the json schema for validation:
             "uniqueitem": true,
             "description" : "da questo valore dipende la size del nodo nel grafico"
           },
+
           "popup_mo": {
             "type": "string",
             "enum": ["resource", "label", "comment"],
             "uniqueitem": true,
             "description" : "stringa che viene mostrata nel tip:puo essere l'Uri, la label o un commento dell'utente"
           },
+
           "mouseover": {
             "type": "string",
             "enum": ["border", "fill"],
             "uniqueitem": true,
             "description" : "azione che viene eseguita per il mouseover:cambio di colore o raddoppio del bordo del nodo"
           },
+
           "color_mo": {
             "type": "string",
             "description": "uno dei colori definiti per css2",
@@ -52,12 +57,14 @@ here's the json schema for validation:
             "uniqueitem": true,
             "description": "colore del nodo in risposta al mouseover, se impostato"
           },
+
           "cssclass": {
             "type": "string",
             "pattern": ".*",
             "uniqueitem": true,
             "description":"nome della classe di appartenenza del nodo"
           },
+
           "comment": {
             "type": "string",
             "pattern": ".*",
@@ -71,6 +78,7 @@ here's the json schema for validation:
             "uniqueitem": true,
             "description" : "tipo di nodo:rettangolo,cerchio,ellisse,esagono"
           },
+          
           "sstyle": {
             "type": "array",
             "items": {
@@ -185,10 +193,12 @@ here's the json schema for validation:
             "type": "string",
             "description": "un id tra i nodi"
           },
+          
           "target": {
             "type": "string",
             "description": "un id tra i nodi"
           },
+          
           "sstyle":{
             "type":"array",
             "items":{
@@ -198,16 +208,19 @@ here's the json schema for validation:
                 "pattern": "forward|back|both",
                 "description": "direzione della freccia. both non è ancora implementato"
               },
+              
               "fill": {
                 "type": "string",
                 "$ref":"#/definitions/colors",
                 "description" :"colore della link che collega due o piu nodi"
               },
+              
               "stroke_dasharray": {
                 "type": "integer",
                 "minimum": 0,
                 "description" :"link tratteggiato. 0 significa non tratteggiato"
               },
+              
               "stroke_width": {
                 "type": "integer",
                 "minimum": 0,
@@ -217,6 +230,7 @@ here's the json schema for validation:
 
             }
           },
+          
           "label": {
             "type": "array",
             "items": {
@@ -227,11 +241,13 @@ here's the json schema for validation:
                   "pattern": ".*:?.+",
                   "description": "verbo del vocabolario"
                 },
+                
                 "label": {
                   "type": "string",
                   "pattern": ".+",
                   "description" : "label mostrata sul link"
                 },
+                
                 "fill": {
                   "type": "string",
                   "$ref":"#/definitions/colors",
@@ -242,12 +258,14 @@ here's the json schema for validation:
                   "$ref":"#/definitions/colors",
                   "description": "colore bordo etichetta"
                 },
+                
                 "stroke_dasharray": {
                   "type": "integer",
                   "minimum": 0,
                   "description": "bordo etichetta tratteggiato, 0 significa non tratteggiato"
                 }
               },
+              
               "required": [
                 "id",
                 "fill",
@@ -279,6 +297,7 @@ here's the json schema for validation:
     "css_classes",
     "links"
   ],
+
   "definitions":{
     "colors":{
         "type":"string",
