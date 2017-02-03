@@ -1,0 +1,257 @@
+{
+  "nodes": [
+    {"id":"http://dbpedia.org/page/Umberto_Eco","label": "Umberto_Eco", "size":21,"popup_mo":"resource","mouseover":"border","color_mo":"aquamarine","cssclass":"subject","comment":"","shape":"polygon","sstyle":[
+        {"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}]},
+    {"id":"http://dbpedia.org/page/Six_Walks_in_the_Fictional_Woods","label": "Six_Walks_in_the_Fictional_Woods", "size":34,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}]},
+    {"id":"http://dbpedia.org/page/Baudolino","label": "Baudolino", "size":34,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}]},
+    {"id":"http://dbpedia.org/resource/Foucault's_Pendulum","label":"Foucault's_Pendulum", "size":34,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}]},
+    {"id":"http://dbpedia.org/resource/The_Island_of_the_Day_Before","label": "The_Island_of_the_Day_Before", "size":34,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}]},
+    {"id":"http://dbpedia.org/resource/The_Mysterious_Flame_of_Queen_Loana","label": "The_Mysterious_Flame_of_Queen_Loana", "size":34,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}]},
+    {"id":"http://dbpedia.org/resource/The_Name_of_the_Rose","label": "The_Name_of_the_Rose", "size":34,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}]},
+    {"id":"http://dbpedia.org/resource/The_Prague_Cemetery","label": "The_Prague_Cemetery", "size":34,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}]},
+    {"id":"http://dbpedia.org/resource/Numero_Zero","label": "Numero_Zero", "size":34,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}]},
+    {"id":"http://dbpedia.org/resource/Belief_or_Nonbelief%3F","label": "Belief_or_Nonbelief", "size":34,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}]},
+
+
+
+
+    {"id":"http://dbpedia.org/page/George_Orwell","label": "George_Orwell", "size":18,"popup_mo":"comment","mouseover":"fill","color_mo":"pink","cssclass":"subject","comment":"grandissimo autore","shape":"circle","sstyle":[
+        { "fill":"orange","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+    {"id":"http://dbpedia.org/resource/Animal_Farm","label": "Animal_Farm", "size":26,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"rect","sstyle":[
+        {"fill":"brown","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+    {"id":"http://dbpedia.org/resource/The_Road_to_Wigan_Pier","label": "The_Road_to_Wigan_Pier", "size":18,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"rect","sstyle":[
+        {"fill":"orange","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+    {"id":"http://dbpedia.org/resource/Inside_the_Whale_and_Other_Essays","label": "Inside_the_Whale_and_Other_Essays", "size":18,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"rect","sstyle":[
+        {"fill":"orange","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+    {"id":"http://dbpedia.org/resource/A_Clergyman's_Daughter","label": "A_Clergyman's_Daughter", "size":18,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"rect","sstyle":[
+        {"fill":"orange","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+    {"id":"http://dbpedia.org/resource/Down_and_Out_in_Paris_and_London","label": "Down_and_Out_in_Paris_and_London", "size":18,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"orange","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+    {"id":"http://dbpedia.org/resource/Keep_the_Aspidistra_Flying","label": "Keep_the_Aspidistra_Flying", "size":18,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"orange","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+    {"id":"http://dbpedia.org/page/Coming_Up_for_Air","label": "Coming_Up_for_Air", "size":18,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"orange","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+    {"id":"http://dbpedia.org/resource/Burmese_Days","label": "Burmese_Days", "size":18,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"orange","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+    {"id":"http://dbpedia.org/page/Homage_to_Catalonia","label": "Homage_to_Catalonia", "size":18,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"orange","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+    {"id":"http://dbpedia.org/page/Nineteen_Eighty-Four","label": "Nineteen_Eighty-Four", "size":18,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"orange","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+    {"id":"http://dbpedia.org/resource/Decline_of_the_English_Murder","label": "Decline_of_the_English_Murder", "size":18,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"circle","sstyle":[
+        {"fill":"orange","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"blue"}]},
+
+
+
+
+
+    {"id":"http://dbpedia.org/page/George_Eliot","label": "George_Eliot","size":9 ,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"subject","comment":"","shape":"ellipse","sstyle":[
+        { "fill":"green","stroke":"black","stroke_width":2,"stroke_dasharray":4,"text_color":"red"}]},
+    {"id":"http://dbpedia.org/resource/Daniel_Deronda","label": "Daniel_Deronda","size":15 ,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"ellipse","sstyle":[
+        {"fill":"green","stroke":"black","stroke_width":2,"stroke_dasharray":4,"text_color":"red"}]},
+    {"id":"http://dbpedia.org/page/Adam_Bede","label": "Adam_Bede","size":15 ,"popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"ellipse","sstyle":[
+        {"fill":"green","stroke":"black","stroke_width":2,"stroke_dasharray":4,"text_color":"red"}]},
+    {"id":"http://dbpedia.org/page/Vincent_Mason","label": "Vincent_Mason","size":15, "popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"ellipse","sstyle":[
+        {"fill":"green","stroke":"black","stroke_width":2,"stroke_dasharray":4,"text_color":"red"}]},
+    {"id":"http://dbpedia.org/page/Silas_Marner","label": "Silas_Marner","size":15, "popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"ellipse","sstyle":[
+        {"fill":"green","stroke":"black","stroke_width":2,"stroke_dasharray":4,"text_color":"red"}]},
+    {"id":"http://dbpedia.org/page/The_Lifted_Veil","label": "The_Lifted_Veil","size":15, "popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"ellipse","sstyle":[
+        {"fill":"green","stroke":"black","stroke_width":2,"stroke_dasharray":4,"text_color":"red"}]},
+    {"id":"http://dbpedia.org/page/Romola","label": "Romola","size":15, "popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"ellipse","sstyle":[
+        {"fill":"green","stroke":"black","stroke_width":2,"stroke_dasharray":4,"text_color":"red"}]},
+    {"id":"http://dbpedia.org/page/Middlemarch","label": "Middlemarch","size":15, "popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"ellipse","sstyle":[
+        {"fill":"green","stroke":"black","stroke_width":2,"stroke_dasharray":4,"text_color":"red"}]},
+    {"id":"http://dbpedia.org/page/The_Mill_on_the_Floss","label": "The_Mill_on_the_Floss","size":15, "popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"ellipse","sstyle":[
+        {"fill":"green","stroke":"black","stroke_width":2,"stroke_dasharray":4,"text_color":"red"}]},
+    {"id":"http://dbpedia.org/page/Felix_Holt,_the_Radical","label": "Felix_Holt_the_Radical","size":15, "popup_mo":"resource","mouseover":"fill","color_mo":"pink","cssclass":"","comment":"","shape":"ellipse","sstyle":[
+        {"fill":"green","stroke":"black","stroke_width":2,"stroke_dasharray":4,"text_color":"red"}]}
+
+
+
+
+],
+
+
+    "css_classes":[
+        {"classname":"subject","fill":"pink","stroke":"black","stroke_width":5,"stroke_dasharray":1},
+        {"classname":"subject:hover","fill":"red"},
+        {"classname":"object","fill":"orange","stroke":"black","stroke_width":1,"stroke_dasharray":0},
+        {"classname":"object:hover","stroke_width":4}
+        
+
+
+    ],
+
+
+
+
+  "links": [
+    {"source": "http://dbpedia.org/page/Six_Walks_in_the_Fictional_Woods", "target": "http://dbpedia.org/page/Umberto_Eco", "cssclass":"","sstyle":[
+        {"fill":"red","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id" : "dbo:author","fill":"blue","stroke":"black","stroke_dasharray":0}]
+    },
+
+    {"source": "http://dbpedia.org/page/Six_Walks_in_the_Fictional_Woods", "target": "http://dbpedia.org/page/Umberto_Eco","cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label": 
+        [{"id":"dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/Baudolino", "target": "http://dbpedia.org/page/Umberto_Eco", "cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":2,"stroke_width":4,"direction":"forward"}],"label": 
+        [{"id":"dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/resource/Foucault's_Pendulum", "target": "http://dbpedia.org/page/Umberto_Eco","cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4 ,"direction":"forward"}],"label": [
+        {"id":"dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/resource/The_Island_of_the_Day_Before", "target": "http://dbpedia.org/page/Umberto_Eco","cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4 ,"direction":"forward"}],"label": [
+        {"id":"dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+
+    {"source": "http://dbpedia.org/resource/The_Mysterious_Flame_of_Queen_Loana", "target": "http://dbpedia.org/page/Umberto_Eco","cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4 ,"direction":"forward"}],"label": [
+            {"id":"dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+        },
+
+    {"source": "http://dbpedia.org/resource/The_Name_of_the_Rose", "target": "http://dbpedia.org/page/Umberto_Eco","cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4 ,"direction":"forward"}],"label": [
+            {"id":"dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+        },
+
+    {"source": "http://dbpedia.org/resource/The_Prague_Cemetery", "target": "http://dbpedia.org/page/Umberto_Eco","cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4 ,"direction":"forward"}],"label": [
+            {"id":"dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+        },
+
+    {"source": "http://dbpedia.org/resource/Numero_Zero", "target": "http://dbpedia.org/page/Umberto_Eco","cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4 ,"direction":"forward"}],"label": [
+            {"id":"dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+        },
+
+    {"source": "http://dbpedia.org/resource/Belief_or_Nonbelief%3F", "target": "http://dbpedia.org/page/Umberto_Eco","cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4 ,"direction":"forward"}],"label": [
+            {"id":"dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+        },
+
+
+
+
+
+
+    {"source": "http://dbpedia.org/resource/Animal_Farm", "target": "http://dbpedia.org/page/George_Orwell","cssclass":"","sstyle":[
+        {"fill":"red","stroke_dasharray":0,"stroke_width":4,"direction":"back"}],"label":[
+        {"id": "dbo:author","fill":"brown","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/resource/The_Road_to_Wigan_Pier", "target": "http://dbpedia.org/page/George_Orwell","cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/resource/Inside_the_Whale_and_Other_Essays", "target": "http://dbpedia.org/page/George_Orwell", "cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":2,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+
+   {"source": "http://dbpedia.org/resource/A_Clergyman's_Daughter", "target": "http://dbpedia.org/page/George_Orwell", "cssclass":"","sstyle":[
+    {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"back"}],"label":[
+        {"id": "dbo:author","fill":"green","stroke":"black","stroke_dasharray":0}]
+    },
+        {"source": "http://dbpedia.org/resource/Down_and_Out_in_Paris_and_London", "target": "http://dbpedia.org/page/George_Orwell", "cssclass":"","sstyle":[
+            {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"green","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/resource/Keep_the_Aspidistra_Flying", "target": "http://dbpedia.org/page/George_Orwell","cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":2,"stroke_width":4, "direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/Coming_Up_for_Air", "target": "http://dbpedia.org/page/George_Orwell", "cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":2,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id":"dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/resource/Burmese_Days", "target": "http://dbpedia.org/page/George_Orwell", "cssclass":"","sstyle":[
+        {"fill":"red","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/Homage_to_Catalonia", "target": "http://dbpedia.org/page/George_Orwell", "cssclass":"","sstyle":[
+        {"fill":"red","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/Nineteen_Eighty-Four", "target": "http://dbpedia.org/page/George_Orwell", "cssclass":"","sstyle":[
+        {"fill":"red","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/resource/Decline_of_the_English_Murder", "target": "http://dbpedia.org/page/George_Orwell", "cssclass":"","sstyle":[
+        {"fill":"red","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+
+   
+
+    {"source": "http://dbpedia.org/resource/Daniel_Deronda", "target": "http://dbpedia.org/page/George_Eliot", "cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"back"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/Adam_Bede", "target": "http://dbpedia.org/page/George_Eliot", "cssclass":"","sstyle":[
+        {"fill":"red","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/Vincent_Mason", "target": "http://dbpedia.org/page/George_Eliot","cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"blue","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/Silas_Marner", "target": "http://dbpedia.org/page/George_Eliot", "cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/The_Lifted_Veil", "target": "http://dbpedia.org/page/George_Eliot", "cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/The_Lifted_Veil", "target": "http://dbpedia.org/page/George_Eliot", "cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/Romola", "target": "http://dbpedia.org/page/George_Eliot", "cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/Middlemarch", "target": "http://dbpedia.org/page/George_Eliot", "cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/The_Mill_on_the_Floss", "target": "http://dbpedia.org/page/George_Eliot", "cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    },
+    {"source": "http://dbpedia.org/page/Felix_Holt,_the_Radical", "target": "http://dbpedia.org/page/George_Eliot", "cssclass":"","sstyle":[
+        {"fill":"black","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+        {"id": "dbo:author","fill":"yellow","stroke":"black","stroke_dasharray":0}]
+    }
+
+
+   
+
+   
+
+    
+   
+    ]
+}

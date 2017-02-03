@@ -1,0 +1,147 @@
+{
+"links":[
+{"source": "http://dbpedia.org/resource/Manchester_United_F.C." ,"target": "http://dbpedia.org/resource/Cristiano_Ronaldo", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/C.D._Nacional" ,"target": "http://dbpedia.org/resource/Cristiano_Ronaldo", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/Real_Madrid_C.F." ,"target": "http://dbpedia.org/resource/Cristiano_Ronaldo", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/Sporting_Clube_de_Portugal" ,"target": "http://dbpedia.org/resource/Cristiano_Ronaldo", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/Portugal_national_under-17_football_team" ,"target": "http://dbpedia.org/resource/Cristiano_Ronaldo", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/Portugal_national_under-20_football_team" ,"target": "http://dbpedia.org/resource/Cristiano_Ronaldo", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/CF_Andorinha" ,"target": "http://dbpedia.org/resource/Cristiano_Ronaldo", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/S.S.D._Parma_Calcio_1913" ,"target": "http://dbpedia.org/resource/Gianluigi_Buffon", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/Italy_national_football_team" ,"target": "http://dbpedia.org/resource/Gianluigi_Buffon", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/Italy_national_under-21_football_team" ,"target": "http://dbpedia.org/resource/Gianluigi_Buffon", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/Juventus_F.C." ,"target": "http://dbpedia.org/resource/Gianluigi_Buffon", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/France_national_under-16_football_team" ,"target": "http://dbpedia.org/resource/Paul_Pogba", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/Juventus_F.C." ,"target": "http://dbpedia.org/resource/Paul_Pogba", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/Le_Havre_AC" ,"target": "http://dbpedia.org/resource/Paul_Pogba", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/Manchester_United_F.C." ,"target": "http://dbpedia.org/resource/Paul_Pogba", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/France_national_under-18_football_team" ,"target": "http://dbpedia.org/resource/Paul_Pogba", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":[
+		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}]
+},
+{"source": "http://dbpedia.org/resource/France_national_under-17_football_team" ,"target": "http://dbpedia.org/resource/Paul_Pogba", "cssclass": "","sstyle":[
+	{"fill":"yellow","stroke_dasharray":0,"stroke_width":4,"direction":"forward"}],"label":
+[		{"id":"team","fill":"blue","stroke":"black","stroke_dasharray":0}
+]
+}],
+"nodes": [
+{"id": "http://dbpedia.org/resource/Cristiano_Ronaldo" ,"label": "Cristiano Ronaldo", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/Gianluigi_Buffon" ,"label": "Gianluigi Buffon", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/Paul_Pogba" ,"label": "Paul Pogba", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/Manchester_United_F.C." ,"label": "Manchester United F.C.", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/C.D._Nacional" ,"label": "C.D._Nacional", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/Real_Madrid_C.F." ,"label": "Real_Madrid_C.F.", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/Sporting_Clube_de_Portugal" ,"label": "Sporting_Clube_de_Portugal", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/Portugal_national_under-17_football_team" ,"label": "Portugal_national_under-17_football_team", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/Portugal_national_under-20_football_team" ,"label": "Portugal_national_under-20_football_team", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/CF_Andorinha" ,"label": "CF_Andorinha", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/S.S.D._Parma_Calcio_1913" ,"label": "S.S.D._Parma_Calcio_1913", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/Italy_national_football_team" ,"label": "Italy_national_football_team", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/Italy_national_under-21_football_team" ,"label": "Italy_national_under-21_football_team", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/Juventus_F.C." ,"label": "Juventus_F.C.", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/France_national_under-16_football_team" ,"label": "France_national_under-16_football_team", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/Le_Havre_AC" ,"label": "Le_Havre_AC", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/France_national_under-18_football_team" ,"label": "France_national_under-18_football_team", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+},
+{"id": "http://dbpedia.org/resource/France_national_under-17_football_team" ,"label": "France_national_under-17_football_team", "size": 21,"popup_mo":"resource","mouseover":"fill","color_mo":"aquamarine","cssclass":"subject","shape":"circle","sstyle":[
+	{"fill":"gold","stroke":"black","stroke_width":2,"stroke_dasharray":0,"text_color":"black"}
+]
+}
+],
+"css_classes":[
+{"classname":"subject","fill":"pink","stroke":"black","stroke_width":5,"stroke_dasharray":1},{"classname":"subject:hover","fill":"red"},{"classname":"object","fill":"Orange","stroke":"black","stroke_width":1,"stroke_dasharray":0},{"classname":"object:hover","stroke_width":4}]}
