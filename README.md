@@ -71,12 +71,6 @@ here's the json schema for validation:
             "uniqueitem": true,
             "description" : "tipo di nodo:rettangolo,cerchio,ellisse,esagono"
           },
-
-
-
-
-
-
           "sstyle": {
             "type": "array",
             "items": {
@@ -172,7 +166,6 @@ here's the json schema for validation:
             "minimum": 0,
             "uniqueitem": true,
             "description" :"bordo tratteggiato per la classe, 0 significa non tratteggiato"
-
           }
           
         },
