@@ -8,10 +8,8 @@ here's the json schema for validation:
 
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  
-  "type": "object",
-  
-  "properties": {
+    "type": "object",
+    "properties": {
     "nodes": {
       "type": "array",
       "items": {
