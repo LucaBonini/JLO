@@ -184,7 +184,11 @@ here's the json schema for validation:
                   "type":"integer",
                   "minimum": 0,
                       "uniqueItem": true
-                }
+                },
+                "text_color":{
+                    "type": "string",
+                    "pattern":".*",
+                    "uniqueItem": true
               }
             }
           }
