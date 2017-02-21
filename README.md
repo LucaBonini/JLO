@@ -189,6 +189,7 @@ here's the json schema for validation:
                     "type": "string",
                     "pattern":".*",
                     "uniqueItem": true
+                    }
               }
             }
           }
@@ -225,7 +226,13 @@ here's the json schema for validation:
                   "minimum": 0,
                   "uniqueitem": true,
                   "description" :"bordo tratteggiato per la classe, 0 significa non tratteggiato"
-                }
+                },
+
+               "text_color":{
+                    "type":"string",
+                    "$ref":"#/definitions/colors",
+                    "uniqueitem": true
+                    }
 
               },
               "required": [
