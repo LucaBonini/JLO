@@ -5,62 +5,62 @@ JLO is a way to graphically rapresent the result of a query to a sparql endpoint
 
 here's the json schema for validation:
 
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "nodes": {
-      "type": "array",
-      "items": {
+      {
+        "$schema": "http://json-schema.org/draft-04/schema#",
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "pattern": "^(https?://).+"
-          },
-          "label": {
-            "type": "string",
-            "pattern": ".+",
-            "uniqueItem": true
-         },
-          "size": {
-            "type": "integer",
-            "minimum": 0,
-            "exclusiveMinumun": true,
-            "uniqueItem": true
-          },
-          "popup_mo": {
-            "type": "string",
-            "enum": ["resource", "label", "comment"],
-            "uniqueItem": true
-          },
-          "mouseover": {
-            "type": "string",
-            "enum": ["border", "fill"],
-            "uniqueItem": true
-          },
-          "color_mo": {
-            "type": "string",
-            "description": "uno dei colori definiti per CSS2",
-            "$ref":"#/definitions/colors",
-            "uniqueItem": true
-          },
-          "cssclass": {
-            "type": "string",
-            "pattern": ".*",
-            "uniqueItem": true
-          },
-          "comment": {
-            "type": "string",
-            "pattern": ".*",
-            "uniqueItem": true
-          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^(https?://).+"
+                },
+                "label": {
+                  "type": "string",
+                  "pattern": ".+",
+                  "uniqueItem": true
+               },
+                "size": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "exclusiveMinumun": true,
+                  "uniqueItem": true
+                },
+                "popup_mo": {
+                  "type": "string",
+                  "enum": ["resource", "label", "comment"],
+                  "uniqueItem": true
+                },
+                "mouseover": {
+                  "type": "string",
+                  "enum": ["border", "fill"],
+                  "uniqueItem": true
+                },
+                "color_mo": {
+                  "type": "string",
+                  "description": "uno dei colori definiti per CSS2",
+                  "$ref":"#/definitions/colors",
+                  "uniqueItem": true
+                },
+                "cssclass": {
+                  "type": "string",
+                  "pattern": ".*",
+                  "uniqueItem": true
+                },
+                "comment": {
+                  "type": "string",
+                  "pattern": ".*",
+                  "uniqueItem": true
+                },
 
-          "shape": {
-            "type": "string",
-            "pattern":"circle|polygon|ellipse|rect|image|.+"
-            "uniqueItem": true
-          },
+                "shape": {
+                  "type": "string",
+                  "pattern":"circle|polygon|ellipse|rect|image|.+"
+                  "uniqueItem": true
+                },
 
 
 
