@@ -81,7 +81,7 @@ here's the json schema for validation:
                 "type":"string",
                 "description": "image's name",
                 "pattern": ".+\\.(jpg|png)"
-                }
+                },
 
                 "sstyle": {
                   "type": "array",
@@ -192,7 +192,7 @@ here's the json schema for validation:
                     }
               }
             }
-          }
+          },
           "css_classes": {
             "type": "array",
             "items": {
@@ -256,7 +256,7 @@ here's the json schema for validation:
                   "description": "un id tra i nodi"
                 },
                 "cssclass":{
-                    "type:"string",
+                    "type":"string",
                     "pattern":".*"
                 },
                 "sstyle":{
