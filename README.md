@@ -244,6 +244,10 @@ here's the json schema for validation:
                   "type": "string",
                   "description": "un id tra i nodi"
                 },
+                "cssclass":{
+                    "type:"string",
+                    "pattern":".*"
+                },
                 "sstyle":{
                   "type":"array",
                   "items":{
