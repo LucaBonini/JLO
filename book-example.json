@@ -253,5 +253,8 @@
 
     
    
-    ]
+    ],
+"templates":[{"name":"template1", "shape":"ellipse","fill":"red","stroke":"black","size":80,"stroke_width":10,"stroke_dasharray":3,"text_color": "black"},
+    {"name":"template2", "shape":"circle","fill":"green","stroke":"black","size":30,"stroke_width":10,"stroke_dasharray":3,"text_color": "black"}
+]
 }
