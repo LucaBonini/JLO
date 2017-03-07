@@ -6,15 +6,24 @@ function drawgraph(dati){
 
 
   d3.selectAll("svg > *").remove();
+ 
     
 
 //var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-var simulation = d3.forceSimulation() //applicato a un array vuoto
-    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(180)) 
+var simulation = d3.forceSimulation() 
+    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(250)) 
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(w / 2, h / 2))
     .force("collide",d3.forceCollide(50).iterations(13) );
+
+  svg.attr("transform",function(){
+    if ((h*w)>=8846360){
+      return "scale(1.5)";
+    }
+    else{
+      return "scale(1)";
+    }
+  });
  
 
 
@@ -47,7 +56,17 @@ var regex= /.+:/;
     return css;
   }
   
+  var templ=[];
+  function templarray(templates){
+      var nameid;
+      graph.templates.forEach(function(template){
+      nameid=template.name;
+      templ[nameid]=template;
+      console.log(templ[nameid]);
+    })
+  }
 
+  templarray(graph.templates);
 
 
 
@@ -98,12 +117,15 @@ var regex= /.+:/;
 
   var link = svg.append("g")
     .attr("class", "links")
-  .selectAll("g") 
-  .data(graph.links) 
-  .enter().append("g")
+    .selectAll("g") 
+    .data(graph.links) 
+    .enter().append("g")
     .attr("style", "font-family: 'lato','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 15px; line-height: 1.42857;")
     .append("line")
-    .attr("style","stroke-opacity:1;stroke-width:3;")
+    .attr("style","stroke-opacity:1;")
+    .attr("stroke-width",function(d){
+      return d.sstyle[0].stroke_width;
+    })
     .attr("stroke",function(d){
       return d.sstyle[0].fill;
     })
@@ -162,49 +184,110 @@ svg.call(tip);
     .selectAll("g")
     .data(graph.nodes) //dati json sezione "nodes"
     .enter().append("g")
+    
     //.attr("style","color: #2c3e50;font-family: 'lato','Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 15px; line-height: 1.42857;")
       .append(function(d){
         if(d.shape=="circle")
           {return document.createElementNS('http://www.w3.org/2000/svg', 'circle')}
-        if(d.shape=="rect")
+        else if(d.shape=="rect")
           {return document.createElementNS('http://www.w3.org/2000/svg', 'rect')}
-        if(d.shape=="ellipse")
+        else if(d.shape=="ellipse")
           {return document.createElementNS('http://www.w3.org/2000/svg', 'ellipse')}
-        if(d.shape=="polygon")
+        else if(d.shape=="polygon")
           {return document.createElementNS('http://www.w3.org/2000/svg', 'polygon')}
+        else if(d.shape=="image")
+          {return document.createElementNS('http://www.w3.org/2000/svg', 'image')}
+        else{
+          var name=d.shape;
+             if(templ[name].shape=="circle")
+              {return document.createElementNS('http://www.w3.org/2000/svg', 'circle')}
+            else if(templ[name].shape=="rect")
+              {return document.createElementNS('http://www.w3.org/2000/svg', 'rect')}
+            else if(templ[name].shape=="ellipse")
+              {return document.createElementNS('http://www.w3.org/2000/svg', 'ellipse')}
+            else if(templ[name].shape=="polygon")
+              {return document.createElementNS('http://www.w3.org/2000/svg', 'polygon')}
+            else if(templ[name].shape=="image")
+              {return document.createElementNS('http://www.w3.org/2000/svg', 'image')}
+        }
+        
       })
-      .attr("id",function(d){
-        return d.label.replace(/_|-|'| /g,".");
-      })
-     .attr("fill", function(d) { 
-          return d.sstyle[0].fill;       
+
+      // dopo }) metto ; e faccio if
+      //
        
+      .attr("id",function(d){
+          return d.label.replace(/_|-|'| /g,".");
+        
+      })
+     .attr("fill", function(d) {
+      if (d.shape=="circle"||d.shape=="rect"||d.shape=="ellipse"||d.shape=="polygon"){
+          return d.sstyle[0].fill;
+        }
+      else if(d.shape!="image"){
+          var name=d.shape;
+          return templ[name].fill;               
+       }
       })
 
      
      .attr("stroke",function(d){
-      return d.sstyle[0].stroke;
+      if (d.shape=="circle"||d.shape=="rect"||d.shape=="ellipse"||d.shape=="polygon"){
+        return d.sstyle[0].stroke;}
+      else if(d.shape!="image"){
+        var name=d.shape;
+        return templ[name].stroke;
+      }
+
+      
      })
      .attr("stroke-width",function(d){
-       return d.sstyle[0].stroke_width;
+      if (d.shape=="circle"||d.shape=="rect"||d.shape=="ellipse"||d.shape=="polygon"){
+        return d.sstyle[0].stroke_width;}
+      else{
+        if(d.shape!="image"){
+          var name=d.shape;
+          return templ[name].stroke_width;
+        }
+      }
+       
      })
      .attr("class",function(d){
-      if(d.sstyle[0].cssclass!="none"){
+      if (d.shape=="ellipse"||d.shape=="circle"||d.shape=="rect"||d.shape=="polygon"){
+         if(d.sstyle[0].cssclass!=""){
         return d.cssclass;
       }
-      else{
+       else{
         return ""
+      } 
       }
-      
+     
+         
 
       })
+     
      .attr("stroke-dasharray",function(d){
-      if(d.sstyle[0].stroke_dasharray!="none"){
-        return d.sstyle[0].stroke_dasharray;
+      if (d.shape=="ellipse"||d.shape=="circle"||d.shape=="rect"||d.shape=="polygon"){
+          if(d.sstyle[0].stroke_dasharray!="none"){
+            return d.sstyle[0].stroke_dasharray;
+          }
+          else {
+            return "0"
+          }
       }
-      else {
-        return "0"
+      else{
+        if (d.shape!="image"){
+          if(!d.sstyle[0].stroke_dasharray){
+            var name=d.shape;
+          return templ[name].stroke_dasharray;
+        }
+          else {
+            return "0"
+          }
+
+        }
       }
+      
      })
     
 
@@ -216,7 +299,13 @@ svg.call(tip);
 
        }
         else(d3.select(this).attr("stroke-width",function(d){
-          return (d.sstyle[0].stroke_width*3);
+          if(d.shape=="ellipse"||d.shape=="circle"||d.shape=="rect"||d.shape=="polygon"){
+            return (d.sstyle[0].stroke_width*3);            
+          }
+          else{
+            var name=d.shape;
+            return(templ[name].stroke_width*3);
+          }
           })
         )
         tip_nodes.show(d);
@@ -224,16 +313,42 @@ svg.call(tip);
       })
      .on("mouseout", function(d) {
        if(d.mouseover=="fill"){
-          d3.select(this).attr("fill", function(d){
-            return d.sstyle[0].fill
-          });
+          if(d.shape=="ellipse"||d.shape=="circle"||d.shape=="rect"||d.shape=="polygon"){
+            d3.select(this).attr("fill", function(d){
+              return d.sstyle[0].fill
+            });
+          }
+          else {
+            var name=d.shape;
+            d3.select(this).attr("fill", function(d){
+            return templ[name].fill;
+          });}
+
         }
-        else( 
+        else{
           d3.select(this).attr("stroke-width",function(d){
+            if(d.shape=="ellipse"||d.shape=="circle"||d.shape=="rect"||d.shape=="polygon"){
             return d.sstyle[0].stroke_width
+            }
+            else{
+              if(d.shape!="image"){
+                var name=d.shape;
+                return templ[name].stroke_width;
+              }
+            }
           })
-          )
+          
+        }
+          
           tip_nodes.hide(d);  
+      });
+
+     d3.selectAll("image").attr("x", -40)
+      .attr("y", -20)
+      .attr("height", "50px")
+      .attr("width", "50px")
+      .attr("xlink:href", function(d){
+        return d.imageurl;
       });
 
 node.call(tip_nodes);
@@ -263,60 +378,118 @@ var lab = svg.append("g")
     .on("mouseover", tip.show)
     .on("mouseout", tip.hide);
 
+    
 
+    
 
-    d3.select(".nodes").selectAll("ellipse")
+ d3.select(".nodes").selectAll("ellipse")
       .attr("cx",0)
       .attr("cy",0)
       .attr("cursor","pointer")
       .attr("rx",function(d){
-        return(scaleellipse(d.size)*(5/2));
-      })
+        if(d.shape=="ellipse"){
+          return(scaleellipse(d.size)*(5/2));          
+        }
+        else {
+          var name=d.shape;
+          return(scaleellipse(templ[name].size)*(5/2));
+        }
+
+          })
       .attr("ry",function(d){
-        return(scaleellipse(d.size));
+        if (d.shape=="ellipse"){
+          return(scaleellipse(d.size));
+        }
+        else{
+           var name=d.shape;
+           return(scaleellipse(templ[name].size));
+        }
       })
       .attr("cursor","pointer");
 
     d3.select(".nodes").selectAll("circle")
       .attr("r",function(d){
-        return(scalecircle(d.size));
+        if(d.shape=="circle"){
+          return(scalecircle(d.size));
+          
+        }
+        else{
+          var name=d.shape;
+          return(scalecircle(templ[name].size));
+        }
       })
       
       .attr("cursor","pointer");
 
+
     d3.select(".nodes").selectAll("rect")
       .attr("height",function(d){
-        return(scalerect(d.size));
+        if (d.shape=="rect"){
+          return (scalerect(d.size));
+        }
+        else {
+          var name=d.shape;
+        return(scalerect(templ[name].size))};
       })
       .attr("width",function(d){
-        return(scalerect(d.size)*4);
+        if (d.shape=="rect"){
+          return (scalerect(d.size)*4);
+        }
+        else {
+          var name=d.shape;
+        return(scalerect(templ[name].size)*4)};
       })
       .attr("x",function(d){
-        return -(scalerect(d.size)*4)/2;
+        if(!(d.size)){
+          return -40;
+        }
+        else{
+        return -(scalerect(d.size)*4)/2;}
       })
       .attr("y",-14)
       .attr("cursor","pointer");
 
     d3.select(".nodes").selectAll("polygon")
       .attr("points",function(d){
-        if(scalepolygon(d.size)==1){
-          return polygon1;
+        if(d.shape=="ellipse"||d.shape=="circle"||d.shape=="rect"||d.shape=="polygon"){
+          if(scalepolygon(d.size)==1){
+            return polygon1;
+          }
+          if(scalepolygon(d.size)==2){
+            return polygon2;
+          }
+          if(scalepolygon(d.size)==3){
+            return polygon3;
+          }
+          if(scalepolygon(d.size)==4){
+            return polygon4;
+          }
+          
         }
-        if(scalepolygon(d.size)==2){
-          return polygon2;
-        }
-        if(scalepolygon(d.size)==3){
-          return polygon3;
-        }
-        if(scalepolygon(d.size)==4){
-          return polygon4;
+        else{
+          if(d.shape!="image"){
+            var name=d.shape;
+            if(scalepolygon(templ[name].size)==1){
+            return polygon1;
+            }
+            if(scalepolygon(templ[name].size)==2){
+              return polygon2;
+            }
+            if(scalepolygon(templ[name].size)==3){
+              return polygon3;
+            }
+            if(scalepolygon(templ[name].size)==4){
+              return polygon4;
+            }
+          }
         }
 
       })
       .attr("x",-40)
-        .attr("y",-14);
+      .attr("y",-14)
+      .attr("cursor","pointer");
       
-     
+   
     d3.select(".nodes").selectAll("g")
         .call(d3.drag()  //funzione che regola il drag aka lo spostamento dei cerchi
           .on("start", dragstarted)
@@ -328,9 +501,7 @@ var lab = svg.append("g")
       .append("use")
         .attr("xlink:href", function(d) { return "#"+d.label.replace(/_|-|\s|'/g,"."); });
 
-
-    d3.select(".nodes").selectAll("g")
-
+      d3.select(".nodes").selectAll("g")
       .on("click",function(d){
         window.open(d.id);
       })
@@ -339,7 +510,16 @@ var lab = svg.append("g")
       .attr("style","font-family:sans-serif;font-size:8px;text-anchor:middle;")
       //.attr("dy",".35em")
       .attr("stroke",function(d){
-        return d.sstyle[0].text_color;
+         if(d.shape=="ellipse"||d.shape=="circle"||d.shape=="rect"||d.shape=="polygon"){
+          return d.sstyle[0].text_color;
+          
+         }
+         else{
+          if(d.shape!="image"){
+          var name=d.shape
+          return templ[name].text_color;            
+          }
+         }
       })
       .append("tspan")
       .attr("x", function(d){
@@ -382,24 +562,24 @@ var lab = svg.append("g")
   function ticked() {
     link
         .attr("x1", function(d) {
-        if(d.direction=="forward") 
+        if(d.sstyle[0].direction=="forward") 
           return (d.source.x);
         else
          return (d.target.x)
      })
         .attr("y1", function(d) { 
-        if(d.direction=="forward") 
+        if(d.sstyle[0].direction=="forward") 
             return (d.source.y)
         else
          return (d.target.y )
      })
         .attr("x2", function(d) { 
-          if(d.direction=="forward")
+          if(d.sstyle[0].direction=="forward")
             return (d.target.x)
         else
           return (d.source.x) })
         .attr("y2", function(d) { 
-          if(d.direction=="forward")
+          if(d.sstyle[0].direction=="forward")
             return (d.target.y)
         else
           return (d.source.y) });
