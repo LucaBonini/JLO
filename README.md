@@ -5,355 +5,368 @@ JLO is a way to graphically rapresent the result of a query to a sparql endpoint
 
 here's the json schema for validation:
 
-     {
-        "$schema": "http://json-schema.org/draft-04/schema#",
-        "type": "object",
-        "properties": {
-          "nodes": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "string",
-                  "pattern": "^(https?://).+",
-                  "description": "Uri della risorsa"
-                },
-
-                "label": {
-                  "type": "string",
-                  "pattern": ".+",
-                  "uniqueitem": true,
-                  "description" : "label visualizzata nel grafico"
-               },
-
-                "size": {
-                  "type": "integer",
-                  "minimum": 0,
-                  "exclusiveminumun": "true",
-                  "uniqueitem": true,
-                  "description" : "da questo valore dipende la size del nodo nel grafico"
-                },
-
-                "popup_mo": {
-                  "type": "string",
-                  "enum": ["resource", "label", "comment"],
-                  "uniqueitem": true,
-                  "description" : "stringa che viene mostrata nel tip:puo essere l'Uri, la label o un commento dell'utente"
-                },
-
-                "mouseover": {
-                  "type": "string",
-                  "enum": ["border", "fill"],
-                  "uniqueitem": true,
-                  "description" : "azione che viene eseguita per il mouseover:cambio di colore o raddoppio del bordo del nodo"
-                },
-
-                "color_mo": {
-                  "type": "string",
-                  "description": "uno dei colori definiti per css2",
-                  "$ref":"#/definitions/colors",
-                  "uniqueitem": true,
-                  "description": "colore del nodo in risposta al mouseover, se impostato"
-                },
-
-                "cssclass": {
-                  "type": "string",
-                  "pattern": ".*",
-                  "uniqueitem": true,
-                  "description":"nome della classe di appartenenza del nodo"
-                },
-
-                "comment": {
-                  "type": "string",
-                  "pattern": ".*",
-                  "uniqueitem": true,
-                  "description": "commento mostrato nel tip, se impostato"
-                },
-
-                "shape": {
-                  "type": "string",
-                  "enum": ["circle", "rect", "ellipse", "polygon","image"],
-                  "uniqueitem": true,
-                  "description" : "tipo di nodo:rettangolo,cerchio,ellisse,esagono o immagine"
-                },
-                "imageurl":{
-                "type":"string",
-                "description": "image's name",
-                "pattern": ".+\\.(jpg|png)"
-                },
-
-                "sstyle": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "fill": {
-                        "type": "string",
-                        "$ref":"#/definitions/colors",
-                        "uniqueitem": true,
-                        "description":"colore del nodo se non è impostata una classe"
-                      },
-                      "stroke": {
-                        "type": "string",
-                        "$ref":"#/definitions/colors",
-                        "uniqueitem": true,
-                        "description": "colore del bordo nodo"
-                      },
-                      "stroke_width": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "uniqueitem": true,
-                        "description":"spessore del bordo nodo"
-
-                      },
-                      "stroke_dasharray": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "uniqueitem": true,
-                        "description":"bordo tratteggiato"
-                      },
-                      "text_color":{
-                      "type":"string",
-                      "$ref":"#/definitions/colors",
-                      "uniqueitem": true,
-                      "description":"colore del testo all'interno del nodo"
-
-                      }
+    {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {
+              "nodes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^(https?://).+"
                     },
-                    "required": [
-                      "fill",
-                      "stroke",
-                      "stroke_width",
-                      "stroke_dasharray"
-                    ]
-                  }
-                }
-              },
-              "required": [
-                "id",
-                "label",
-                "size",
-                "cssclass",
-                "sstyle",
-                "shape",
-                "popup_mo",
-                "mouseover",
-                "color_mo"
-
-              ]
-            },
-            "uniqueitem": true
-          },
-          "templates":{
-            "type": "array",
-            "items":{
-              "type":"object",
-              "properties":{
-                "name":{
-                  "type":"string",
-                  "pattern":".+"
-                },
-                "shape":{
-                  "type":"string",
-                  "enum": ["circle", "rect", "ellipse", "polygon","image"],
-                  "uniqueItem": true
-                },
-                "fill":{
-                  "type":"string",
-                  "$ref":"#/definitions/colors",
-                          "uniqueItem": true
-                },
-                "stroke":{
-                  "type":"string",
-                  "$ref":"#/definitions/colors",
-                          "uniqueItem": true
-                },
-                "size":{
-                  "type":"integer",
-                  "minimum": 0,
+                    "label": {
+                      "type": "string",
+                      "pattern": ".+",
+                      "uniqueItem": true
+                   },
+                    "size": {
+                      "type": "integer",
+                      "minimum": 0,
                       "exclusiveMinumun": true,
                       "uniqueItem": true
-                },
-                "stroke_width":{
-                  "type":"integer",
-                  "minimum": 0,
-                      "uniqueItem": true
-                },
-                "stroke_dasharray":{
-                  "type":"integer",
-                  "minimum": 0,
-                      "uniqueItem": true
-                },
-                "text_color":{
-                    "type": "string",
-                    "pattern":".*",
-                    "uniqueItem": true
-                    }
-              }
-            }
-          },
-          "css_classes": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "classname": {
-                  "type": "string",
-                  "pattern": ".+",
-                  "description": "nome della classe"
-                },
-                "fill": {
-                  "type": "string",
-                  "$ref":"#/definitions/colors",
-                  "uniqueitem": true,
-                  "description":"colore del nodo per la classe"
-                },
-                "stroke": {
-                  "type": "string",
-                  "$ref":"#/definitions/colors",
-                  "uniqueitem": true,
-                  "description": "colore del bordo nodo per la classe"
-                },
-                "stroke_width": {
-                  "type": "integer",
-                  "minimum": 0,
-                  "uniqueitem": true,
-                  "description":"spessore del bordo nodo per la classe"
-                },
-                "stroke_dasharray": {
-                  "type": "integer",
-                  "minimum": 0,
-                  "uniqueitem": true,
-                  "description" :"bordo tratteggiato per la classe, 0 significa non tratteggiato"
-                },
-
-               "text_color":{
-                    "type":"string",
-                    "$ref":"#/definitions/colors",
-                    "uniqueitem": true
-                    }
-
-              },
-              "required": [
-                "classname"
-
-              ]
-            },
-            "uniqueitem": true
-          },
-          "links": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "source": {
-                  "type": "string",
-                  "description": "un id tra i nodi"
-                },
-                "target": {
-                  "type": "string",
-                  "description": "un id tra i nodi"
-                },
-                "cssclass":{
-                    "type":"string",
-                    "pattern":".*"
-                },
-                "sstyle":{
-                  "type":"array",
-                  "items":{
-                  "properties":{
-                      "direction": {
+                    },
+                    "popup_mo": {
                       "type": "string",
-                      "pattern": "forward|back|both",
-                      "description": "direzione della freccia. both non è ancora implementato"
+                      "enum": ["resource", "label", "comment"],
+                      "uniqueItem": true
+                    },
+                    "mouseover": {
+                      "type": "string",
+                      "enum": ["border", "fill"],
+                      "uniqueItem": true
+                    },
+                    "color_mo": {
+                      "type": "string",
+                      "description": "CSS2's colors",
+                      "$ref":"#/definitions/colors",
+                      "uniqueItem": true
+                    },
+                    "cssclass": {
+                      "type": "string",
+                      "pattern": ".*",
+                      "uniqueItem": true
+                    },
+                    "comment": {
+                      "type": "string",
+                      "pattern": ".*",
+                      "uniqueItem": true
+                    },
+
+                    "shape": {
+                      "type": "string",
+                      "pattern":"circle|polygon|ellipse|rect|image|.+"
+                      "uniqueItem": true
+                    },
+
+
+
+
+
+
+                    "sstyle": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "fill": {
+                            "type": "string",
+                            "$ref":"#/definitions/colors",
+                            "uniqueItem": true
+                          },
+                          "stroke": {
+                            "type": "string",
+                            "$ref":"#/definitions/colors",
+                            "uniqueItem": true
+                          },
+                          "stroke_width": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "uniqueItem": true
+
+                          },
+                          "stroke_dasharray": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "uniqueItem": true
+                          },
+                          "text_color":{
+                          "type":"string",
+                          "$ref":"#/definitions/colors",
+                          "uniqueItem": true
+
+                          }
+                        },
+                        "required": [
+                          "fill",
+                          "stroke",
+                          "stroke_width",
+                          "stroke_dasharray"
+                        ]
+                      }
+                    }
+                  },
+                  "anyOf":[{
+                    "required": [
+                      "id",
+                      "label",
+                      "size",
+                      "cssclass",
+                      "shape",
+                      "popup_mo",
+                      "mouseover",
+                      "color_mo"
+
+                    ]
+                  },
+                  {
+                  "required": [
+                    "id",
+                    "label",
+                    "size",
+                    "sstyle",
+                    "shape",
+                    "popup_mo",
+                    "mouseover",
+                    "color_mo"
+
+                  ]
+                  },
+                  {
+                  "required": [
+                    "id",
+                    "label",
+                    "size",
+                    "cssclass",
+                    "sstyle",
+                    "shape",
+                    "popup_mo",
+                    "mouseover",
+                    "color_mo"
+
+                  ]
+                  }
+                  ]
+
+                },
+                "uniqueItem": true
+              },
+
+              "templates":{
+               "type": "array",
+               "items":{
+                    "type":"object",
+                    "properties":{
+                         "name":{
+                              "type":"string",
+                              "pattern":".+"
+                         },
+                         "shape":{
+                              "type":"string",
+                              "enum": ["circle", "rect", "ellipse", "polygon","image"],
+                              "uniqueItem": true
+                         },
+                         "fill":{
+                              "type":"string",
+                              "$ref":"#/definitions/colors",
+                              "uniqueItem": true
+                         },
+                         "stroke":{
+                              "type":"string",
+                              "$ref":"#/definitions/colors",
+                              "uniqueItem": true
+                         },
+                         "size":{
+                              "type":"integer",
+                              "minimum": 0,
+                              "exclusiveMinumun": true,
+                              "uniqueItem": true
+                         },
+                         "stroke_width":{
+                              "type":"integer",
+                              "minimum": 0,
+                              "uniqueItem": true
+                         },
+                         "stroke_dasharray":{
+                              "type":"integer",
+                              "minimum": 0,
+                              "uniqueItem": true
+                         }
+                    }
+               }
+              }
+              "css_classes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "classname": {
+                      "type": "string"
                     },
                     "fill": {
                       "type": "string",
                       "$ref":"#/definitions/colors",
-                      "description" :"colore della link che collega due o piu nodi"
+                      "uniqueItem": true
                     },
-                    "stroke_dasharray": {
-                      "type": "integer",
-                      "minimum": 0,
-                      "description" :"link tratteggiato. 0 significa non tratteggiato"
+                    "stroke": {
+                      "type": "string",
+                      "$ref":"#/definitions/colors",
+                      "uniqueItem": true
                     },
                     "stroke_width": {
                       "type": "integer",
                       "minimum": 0,
-                      "desciption" :"spessore del link"
-                    }
-                  }
+                      "uniqueItem": true
+                    },
+                    "stroke_dasharray": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "uniqueItem": true
 
+                    }
+
+                  },
+                  "anyOf":[{
+                    "required": [
+                      "classname",
+                      "fill"
+
+                    ]
+                  },
+                  {
+                    "required": [
+                      "classname",
+                      "stroke_width"
+
+                    ]
                   }
+                  ]
                 },
-                "label": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
+                "uniqueItem": true
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "pattern": "https?.+",
+                      "description": "node's id"
+                    },
+                    "target": {
+                      "type": "string",
+                      "pattern": "https?.+",
+                      "description": "node's id"
+                    },
+                    "sstyle":{
+                      "type":"array",
+                      "items":{
+                        "direction": {
                         "type": "string",
-                        "pattern": ".*:?.+",
-                        "description": "verbo del vocabolario"
-                      },
-                      "label": {
-                        "type": "string",
-                        "pattern": ".+",
-                        "description" : "label mostrata sul link"
+                        "pattern": "forward|back|both",
+                        "description": "arrow's direction"
                       },
                       "fill": {
                         "type": "string",
                         "$ref":"#/definitions/colors",
-                        "description": "colore etichetta sul link"
-                      },
-                      "stroke": {
-                        "type": "string",
-                        "$ref":"#/definitions/colors",
-                        "description": "colore bordo etichetta"
+                        "description" :"link's color"
                       },
                       "stroke_dasharray": {
                         "type": "integer",
                         "minimum": 0,
-                        "description": "bordo etichetta tratteggiato, 0 significa non tratteggiato"
+                        "description" :"dashed link or not"
+                      },
+                      "stroke_width": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "desciption" :"link's thickness"
+                      }
+
                       }
                     },
+                    "cssclass":{
+                      "type":"string",
+                      "description":"link's class",
+                      "pattern":".*"
+
+                    },
+                    "label": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "pattern": ".+:.+"
+                          },
+                          "label": {
+                            "type": "string",
+                            "pattern": ".+"
+                          },
+                          "fill": {
+                            "type": "string",
+                            "$ref":"#/definitions/colors"
+                          },
+                          "stroke": {
+                            "type": "string",
+                            "$ref":"#/definitions/colors"
+                          },
+                          "stroke_dasharray": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "fill",
+                          "stroke",
+                          "stroke_dasharray"
+                        ]
+
+
+                  },
+                  "anyOf":[{
                     "required": [
-                      "id",
-                      "fill",
-                      "stroke",
-                      "stroke_dasharray"
+                      "source",
+                      "target",
+                      "sstyle",
+                      "label"
+                    ],
+                     "required": [
+                      "source",
+                      "target",
+                      "cssclass",
+                      "label"
                     ]
-                  }
-                }
-              },
-              "anyOf":[{
-                "required": [
-                "source",
-                "target",
-                "cssclass",
-                "label"
-              ],
+                  }]
+
+
+              }
+            },
+            "anyOf":[{
               "required": [
-                "source",
-                "target",
-                "sstyle",
-                "label"
+                "nodes",
+                "links",
+                "templates"
               ]
-              }]
+            },
+            {
+              "required": [
+                "nodes",
+                "css_classes",
+                "templates",
+                "links"
+              ]
+            }
+            ],
+            "definitions":{
+              "colors":{
+                  "type":"string",
+                   "pattern": "AliceBlue|AntiqueWhite|Aqua|Aquamarine|Azure|Beige|Bisque|Black|BlanchedAlmond|Blue|BlueViolet|Brown|BurlyWood|CadetBlue|Chartreuse|Chocolate|Coral|CornflowerBlue|Cornsilk|Crimson|Cyan|DarkBlue|DarkCyan|DarkGoldenRod|DarkGray|DarkGrey|DarkGreen|DarkKhaki|DarkMagenta|DarkOliveGreen|DarkOrange|DarkOrchid|DarkRed|DarkSalmon|DarkSeaGreen|DarkSlateBlue|DarkSlateGray|DarkSlateGrey|DarkTurquoise|DarkViolet|DeepPink|DeepSkyBlue|DimGray|DimGrey|DodgerBlue|FireBrick|FloralWhite|ForestGreen|Fuchsia|Gainsboro|GhostWhite|Gold|Gray|Grey|Green|GreenYellow|HoneyDew|HotPink|IndianRed|Indigo|Ivory|Khaki|Lavender|LavenderBlush|LawnGreen|LemonChiffon|LightBlue|LightCoral|LightCyan|LightGoldenRodYellow|LightGray|LightGrey|LightGreen|LightPink|LightSalmon|LightSeaGreen|LightSkyBlue|LightSlateGray|LightSlateGrey|LightSteelBlue|LightYellow|Lime|LimeGreen|Linen|Magenta|Maroon|MediumAquaMarine|MediumBlue|MediumOrchid|MediumPurple|MediumSeaGreen|MediumSlateBlue|MediumSpringGreen|MediumTurquoise|MediumVioletRed|MidnightBlue|MintCream|MistyRose|Moccasin|NavajoWhite|Navy|OldLace|Olive|OliveDrab|Orange|OrangeRed|Orchid|PaleGoldenRod|PaleGreen|PaleTurquoise|PaleVioletRed|PapayaWhip|PeachPuff|Peru|Pink|Plum|PowderBlue|Purple|RebeccaPurple|Red|RosyBrown|RoyalBlue|SaddleBrown|Salmon|SandyBrown|SeaGreen|SeaShell|Sienna|Silver|SkyBlue|SlateBlue|SlateGray|SlateGrey|Snow|SpringGreen|SteelBlue|Tan|Teal|Thistle|Tomato|Turquoise|Violet|Wheat|White|WhiteSmoke|Yellow|YellowGreen"
+              }
             }
           }
-        },
-        "required": [
-          "nodes",
-          "css_classes",
-          "links"
-        ],
-
-        "definitions":{
-          "colors":{
-              "type":"string",
-               "pattern": "|aliceblue|antiquewhite|aqua|aquamarine|azure|beige|bisque|black|blanchedalmond|blue|blueviolet|brown|burlywood|cadetblue|chartreuse|chocolate|coral|cornflowerblue|cornsilk|crimson|cyan|darkblue|darkcyan|darkgoldenrod|darkgray|darkgrey|darkgreen|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|darkred|darksalmon|darkseagreen|darkslateblue|darkslategray|darkslategrey|darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dimgrey|dodgerblue|firebrick|floralwhite|forestgreen|fuchsia|gainsboro|ghostwhite|gold|gray|grey|green|greenyellow|honeydew|hotpink|indianred|indigo|ivory|khaki|lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|lightgoldenrodyellow|lightgray|lightgrey|lightgreen|lightpink|lightsalmon|lightseagreen|lightskyblue|lightslategray|lightslategrey|lightsteelblue|lightyellow|lime|limegreen|linen|magenta|maroon|mediumaquamarine|mediumblue|mediumorchid|mediumpurple|mediumseagreen|mediumslateblue|mediumspringgreen|mediumturquoise|mediumvioletred|midnightblue|mintcream|mistyrose|moccasin|navajowhite|navy|oldlace|olive|olivedrab|orange|orangered|orchid|palegoldenrod|palegreen|paleturquoise|palevioletred|papayawhip|peachpuff|peru|pink|plum|powderblue|purple|rebeccapurple|red|rosybrown|royalblue|saddlebrown|salmon|sandybrown|seagreen|seashell|sienna|silver|skyblue|slateblue|slategray|slategrey|snow|springgreen|steelblue|tan|teal|thistle|tomato|turquoise|violet|wheat|white|whitesmoke|yellow|yellowgreen|^#(([a-z]|[0-9]){6})"
-          }
-        }
-      }
